@@ -1,8 +1,0 @@
-[gd_scene load_steps=2 format=3 uid="uid://cfkyyb0a4tcet"]
-
-[ext_resource type="Texture2D" uid="uid://ccwrlyauj7l5q" path="res://assets/GameBg.png" id="1_1g03q"]
-
-[node name="GameBg" type="Sprite2D"]
-scale = Vector2(0.6, 0.6)
-texture = ExtResource("1_1g03q")
-offset = Vector2(959.01636, 539.34424)

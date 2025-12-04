@@ -11,9 +11,14 @@ config_version=5
 [application]
 
 config/name="Gem Catcher"
-run/main_scene="uid://cfkyyb0a4tcet"
+run/main_scene="uid://b30qs1o2lsorw"
 config/features=PackedStringArray("4.5", "Mobile")
 config/icon="res://assets/icon.svg"
+
+[editor]
+
+naming/scene_name_casing=1
+naming/script_name_casing=1
 
 [rendering]
 
