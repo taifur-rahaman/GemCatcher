@@ -2,6 +2,9 @@ extends Node2D
 
 const GEM = preload("res://Scenes/Gem/Gems.tscn")
 
+@onready var timer: Timer = $Timer
+@onready var paddle: Area2D = $Paddle
+
 var left_edge : float
 var right_edge : float
 var spawn_height : float = -50.0 # spawn height is above screen
@@ -17,6 +20,13 @@ func spawn_gem() -> void:
 	var random_x = randf_range(left_edge, right_edge)
 	new_gem.position = Vector2(random_x, spawn_height)
 	add_child(new_gem)
+
+func stop_all() -> void:
+	timer.stop()
+	paddle.set_process(false)
+	for child in get_children():
+		if child is GEM:
+			child.set_process(false)
 
 func _on_timer_timeout() -> void:
 	spawn_gem()

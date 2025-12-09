@@ -10,6 +10,7 @@ var axis : float
 func _ready() -> void:
 	left_edge = get_viewport_rect().position.x
 	right_edge = get_viewport_rect().end.x
+	
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.

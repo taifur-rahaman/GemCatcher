@@ -23,6 +23,10 @@ A Game using Godot 4.5.1 Engine. A simple 2D arcade Game where the player moves 
 
 ## DevLog
 
+***DevLog 0.0.5***
+- Added Stop Game functionality when Gem Falls off the Screen.
+	- Everything including Falling Gems and Paddle stop moving
+
 ***DevLog 0.0.4***
 - Preloaded the Gem class on Game Scene
 - Added a 2 seconds timer for each Gem to fall
