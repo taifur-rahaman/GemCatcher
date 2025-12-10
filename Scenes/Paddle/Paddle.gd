@@ -31,4 +31,8 @@ func _process(delta: float) -> void:
 
 
 func _collision_paddle(area: Area2D) -> void:
+	var c_sound = get_parent().sound_collision
+	if c_sound.playing == false:
+		c_sound.position = area.position
+		c_sound.play()
 	print("+1 Point")

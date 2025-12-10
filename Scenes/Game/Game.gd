@@ -4,6 +4,8 @@ const GEM = preload("res://Scenes/Gem/Gems.tscn")
 
 @onready var timer: Timer = $Timer
 @onready var paddle: Area2D = $Paddle
+@onready var sound_bg: AudioStreamPlayer = $Sound_BG
+@onready var sound_collision: AudioStreamPlayer2D = $Sound_Collision
 
 var left_edge : float
 var right_edge : float
