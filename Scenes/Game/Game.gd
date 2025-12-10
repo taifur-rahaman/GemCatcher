@@ -1,6 +1,7 @@
 extends Node2D
 
 const GEM = preload("res://Scenes/Gem/Gems.tscn")
+# const EXPLODE = preload("res://Assets/explode.wav")
 
 @onready var timer: Timer = $Timer
 @onready var paddle: Area2D = $Paddle
@@ -24,6 +25,8 @@ func spawn_gem() -> void:
 	add_child(new_gem)
 
 func stop_all() -> void:
+	sound_bg.stop()
+	sound_collision.play()
 	timer.stop()
 	paddle.set_process(false)
 	for child in get_children():

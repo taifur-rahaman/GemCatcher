@@ -11,6 +11,7 @@ A Game using Godot 4.5.1 Engine. A simple 2D arcade Game where the player moves 
 	- Made it so that It automatically plays when Game starts
 - Added Collision sound
 	- Made it so that It only sounds when the Gem Falls onto the Paddle
+	- When Game Over the Background Music stops and one final Explosion sound happen
 
 ***DevLog 0.0.4***
 - Preloaded the Gem class on Game Scene
