@@ -7,6 +7,9 @@ const GEM = preload("res://Scenes/Gem/Gems.tscn")
 @onready var paddle: Area2D = $Paddle
 @onready var sound_bg: AudioStreamPlayer = $Sound_BG
 @onready var sound_collision: AudioStreamPlayer2D = $Sound_Collision
+@onready var score_label: Label = $ScoreLabel
+@onready var game_over_label: Label = $GameOverLabel
+
 
 var left_edge : float
 var right_edge : float
@@ -17,6 +20,7 @@ func _ready() -> void:
 	# -50 & +50 because don't want the gem to spawn on the screen edges
 	left_edge = get_viewport_rect().position.x + edge_margin
 	right_edge = get_viewport_rect().end.x - edge_margin
+	game_over_label.visible = false
 
 func spawn_gem() -> void:
 	var new_gem = GEM.instantiate()

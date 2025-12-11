@@ -1,10 +1,11 @@
-[gd_scene load_steps=6 format=3 uid="uid://b30qs1o2lsorw"]
+[gd_scene load_steps=7 format=3 uid="uid://b30qs1o2lsorw"]
 
 [ext_resource type="Script" uid="uid://c6pyj2q15equ6" path="res://Scenes/Game/Game.gd" id="1_ln2h6"]
 [ext_resource type="Texture2D" uid="uid://ccwrlyauj7l5q" path="res://Assets/GameBg.png" id="1_rdw05"]
 [ext_resource type="PackedScene" uid="uid://cnt10f4tgvl57" path="res://Scenes/Paddle/Paddle.tscn" id="2_gwu2e"]
 [ext_resource type="AudioStream" uid="uid://dy704ffqtco5t" path="res://Assets/bgm_action_5.mp3" id="4_ln2h6"]
 [ext_resource type="AudioStream" uid="uid://dsb4xleejwahp" path="res://Assets/explode.wav" id="5_y3kpf"]
+[ext_resource type="FontFile" uid="uid://b5m1slj3f7f68" path="res://Assets/ARCADECLASSIC.TTF" id="6_3k6gv"]
 
 [node name="Game" type="Node2D"]
 script = ExtResource("1_ln2h6")
@@ -30,5 +31,25 @@ parameters/looping = false
 
 [node name="Sound_Collision" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("5_y3kpf")
+
+[node name="ScoreLabel" type="Label" parent="."]
+offset_left = 27.0
+offset_top = 28.0
+offset_right = 67.0
+offset_bottom = 51.0
+theme_override_fonts/font = ExtResource("6_3k6gv")
+theme_override_font_sizes/font_size = 48
+text = "000"
+
+[node name="GameOverLabel" type="Label" parent="."]
+offset_left = 360.0
+offset_top = 300.0
+offset_right = 794.0005
+offset_bottom = 398.0
+theme_override_colors/font_color = Color(0.9607843, 0.21176471, 0.21176471, 1)
+theme_override_colors/font_shadow_color = Color(1, 1, 1, 0)
+theme_override_fonts/font = ExtResource("6_3k6gv")
+theme_override_font_sizes/font_size = 96
+text = "Game Over"
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
